@@ -1,0 +1,377 @@
+$letraChica:15px;
+$letraMedia:20px;
+$letraGrande:25px;
+
+
+header{
+    color:deepskyblue;
+}
+
+body{
+    background-color: rgb(132, 136, 143);
+}
+
+#espacioCarousel{
+    padding: 5%;
+}
+
+
+@mixin bienvenidaHome($colorLetra, $colorFondo,$tamanioLetra){
+    color: $colorLetra;
+    background-color: $colorFondo;
+    font-size: $tamanioLetra;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+
+}
+
+@mixin divHome($colorFondo,$tamanioLetra){
+    background-color: $colorFondo;
+    font-size: $tamanioLetra;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.p{
+    background-color: brown;
+    font-size: 30px;
+    color: burlywood;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+}
+
+.pExtendido{
+    @extend .p;
+    background-color: chocolate;
+    color: cyan;
+}
+
+.tours{
+    
+    height: 800px;
+    
+    background-color: wheat;
+    
+
+    &__titulo{
+        font-size: 72px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        align-items: center;
+        color:rgb(201, 151, 57);
+
+    }
+
+    &__bloque{
+
+        background-color: chocolate;
+        height: 400px;
+    }
+
+    &__subtitulo{
+        font-size: 48px;
+        color: white;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    &__lista{
+          
+        display:flex;
+        list-style-type: none;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+            
+    }
+
+    &__item{
+        padding: 2%;
+                   
+    }    
+
+    &__link{
+        color: rgb(66, 152, 233);
+        text-decoration: none;
+        font-family: 'Times New Roman', Times, serif;
+        align-items: center;
+    }    
+    
+}
+
+table{
+    color: green;
+}
+
+.footer{
+    background-color: rgb(53, 181, 255);
+    color:rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+
+    &__lista{
+        list-style-type: none;
+    }
+
+    &__data{
+        color:white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    &__link{
+        color: coral;
+        text-decoration: none;
+        font-family: 'Times New Roman', Times, serif;
+        align-items: center;
+    }
+}
+
+h2{
+    color:brown;
+}
+
+.colorFormulario{
+    color:orangered;
+}
+
+tr{
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+
+}
+
+#main{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 300px);
+
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, 300px);
+
+    &__fila{
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 100%;
+        align-items: center;
+    }
+
+    &__item{
+        padding:2%;
+
+        &--hover{
+            background-color: coral;
+        }
+    }
+
+
+}
+
+.discografia{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 200px);
+    
+
+    &__fila{
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 100%;
+        align-items: center;
+    }
+
+    &__item{
+        padding:2%;
+        background-color: rgb(255, 201, 100);
+        border: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+    }
+
+
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+form{
+    background-color:burlywood;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+#discografia{
+    background-color: rgb(255, 201, 100);
+    border: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ 
+
+
+li{
+    width: 10%;
+    color:white;
+    text-align: center;
+    font-size:20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media only screen and ( max-width: 600px ){
+
+    .bienvenida{
+        @include bienvenidaHome(pink,green, 30px)
+    }
+
+    #mainHome{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6, 300px);
+
+
+    }
+
+    .divUno{
+        @include divHome(cornsilk,$letraGrande)
+        
+    }
+    .divDos{
+        @include divHome(rgb(235, 216, 143),$letraGrande)
+        
+        
+    }
+    .divTres{
+        @include divHome(rgb(189, 165, 69),$letraGrande)
+       
+        
+    }
+    .divCuatro{
+        @include divHome(rgb(126, 107, 34),$letraGrande)
+        
+        
+    }
+    .divCinco{
+        @include divHome(rgb(119, 101, 27),$letraGrande)
+        
+        
+    }
+    .divSeis{
+        @include divHome(rgb(54, 46, 15),$letraGrande)
+        
+        
+        
+    }
+
+}
+
+
+@media only screen and ( min-width: 600px ){
+
+    .bienvenida{
+        @include bienvenidaHome(rgb(216, 119, 135),rgb(87, 156, 87) , 60px)
+    }
+    #mainHome{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(3, 300px);
+
+
+    }
+
+    .divUno{
+        @include divHome(cornsilk,$letraMedia)
+        
+    }
+    .divDos{
+        @include divHome(rgb(235, 216, 143),$letraMedia)
+        
+        
+    }
+    .divTres{
+        @include divHome(rgb(189, 165, 69),$letraMedia)
+       
+        
+    }
+    .divCuatro{
+        @include divHome(rgb(126, 107, 34),$letraMedia)
+        
+        
+    }
+    .divCinco{
+        @include divHome(rgb(119, 101, 27),$letraMedia)
+        
+        
+    }
+    .divSeis{
+        @include divHome(rgb(54, 46, 15),$letraMedia)
+        
+        
+        
+    }
+
+}
+
+
+@media only screen and ( min-width: 992px ){
+
+    .bienvenida{
+        @include bienvenidaHome(rgb(66, 19, 27),rgb(72, 201, 72), 100px )
+    }
+    #mainHome{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: repeat(2, 300px);
+
+
+    }
+
+    .divUno{
+        @include divHome(cornsilk,$letraChica)
+        
+    }
+    .divDos{
+        @include divHome(rgb(235, 216, 143),$letraChica)
+        
+        
+    }
+    .divTres{
+        @include divHome(rgb(189, 165, 69),$letraChica)
+       
+        
+    }
+    .divCuatro{
+        @include divHome(rgb(126, 107, 34),$letraChica)
+        
+        
+    }
+    .divCinco{
+        @include divHome(rgb(119, 101, 27),$letraChica)
+        
+        
+    }
+    .divSeis{
+        @include divHome(rgb(54, 46, 15),$letraChica)
+        
+        
+        
+    }
+
+}
