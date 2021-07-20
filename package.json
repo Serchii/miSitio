@@ -14,5 +14,13 @@
     "nodemon": "^2.0.10"
   },
   "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Serchii/nuevoRepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Serchii/nuevoRepo/issues"
+  },
+  "homepage": "https://github.com/Serchii/nuevoRepo#readme",
   "description": ""
 }
